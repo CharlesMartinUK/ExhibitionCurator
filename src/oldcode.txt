@@ -1,0 +1,68 @@
+//https://api.artic.edu/docs/#introduction
+	//does not provide image ??(could not get thumbnail to work)
+	//const url = "https://api.artic.edu/api/v1/artworks/search?q="
+	
+	/*
+		// weird cors errors with this
+		loadData('https://openaccess-api.clevelandart.org/api/artworks?q=' + searchText ,
+		(result) => { 
+				console.log("before data")
+			var info = result
+					console.log("after data")
+			var filt = [] // not using var here causes weirdness
+			
+			for (var i =0; i <  info.length;i++) {
+				var t = info[i]
+				console.log(i)
+													
+				filt.push({ title:t.title, 
+										id: i, 
+										text: t.description, 
+										imageData:  "url" in t._images ? t.images.web.url :""  
+										} )
+				//filt.push({title:t.title, id: t.id, text: t.thumbnail.alt_text, imageData: t.thumbnail.lqip , width:t.thumbnail.width, height:t.thumbnail.height  } )
+			}
+		
+			//console.log(filt)
+			
+			return filt 
+		})*/
+	
+	
+	/*
+	const loadData = React.useCallback(async () => {
+		
+				var completeURL = url + searchText +'"'
+				//console.log("called "+url+searchText)
+				dispatch( {type:State.LOADING} )
+				try {
+					const result = await axios.get(completeURL);
+					//console.log("done")
+					
+					var info = result.data.records
+					//console.log(info)
+					
+					
+					var filt = [] // not using var here causes weirdness
+					for (var i =0; i <  info.length;i++) {
+						var t = info[i]
+						//console.log(i)
+												
+						filt.push({ title:t._primaryTitle, 
+									id: i, 
+									text: "", 
+									imageData:  "_primary_thumbnail" in t._images ? t._images._primary_thumbnail :""  
+									} )
+						//filt.push({title:t.title, id: t.id, text: t.thumbnail.alt_text, imageData: t.thumbnail.lqip , width:t.thumbnail.width, height:t.thumbnail.height  } )
+					}
+					
+					
+					//console.log(filt)
+					
+					dispatch({		type: State.LOADED, payload:{works: filt} });
+				}catch {
+					dispatch({type:State.ERROR})
+				}
+				
+			}, [ url + searchText +'"']);
+	*/

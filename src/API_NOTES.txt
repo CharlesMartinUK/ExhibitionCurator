@@ -1,0 +1,47 @@
+API NOTES
+	metmus
+		cannot get search with thumbnail and uniquie number
+		
+		only unique number and nothing else OR details with no number
+
+		
+	 Art Institute of Chicago
+	 
+		https://api.artic.edu/docs/#iiif-image-api
+	 
+		cannot get thumbnail image
+		
+		
+		https://api.artic.edu/api/v1/artworks/search?q=cats
+		
+		//get details
+		https://api.artic.edu/api/v1/artworks/{numberhere}
+		
+			//get details of more than 1
+			https://api.artic.edu/api/v1/artworks?ids=45259,656
+			
+		
+			https://www.artic.edu/iiif/2/{art image id }/full/400,/0/default.jpg
+		
+		
+		
+		
+	Cleveland Museum of Art 
+		https://openaccess-api.clevelandart.org
+			thumbnails too big
+			
+			
+			
+			
+			
+	brooklyn museum
+		https://www.brooklynmuseum.org/opencollection/api/docs/overview
+		requires api key
+	
+	
+	https://edan.si.edu/openaccess/apidocs/
+		requires api key
+		
+	rijksmuseum
+		requires api key
+		
