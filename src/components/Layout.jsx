@@ -46,20 +46,12 @@ const Layout = () => {
 		setSearchText(text)
 	}
  
-	/*
-		<nav>
-			<ul>
-			  <li>
-				<Link to="/">Home</Link>
-			  </li>
-			 
-			</ul>
-		</nav>
-	*/
-	
-	function test(src){
+		
+	function sourceChanged(src){
 		//console.log("layout src changed: "+num)
 		//setSearchAPI(num)
+		//if(searchText.length <= 0) return
+
 		navigate('/search?q='+searchText+'&src='+src)
 	}
 
@@ -68,7 +60,7 @@ const Layout = () => {
 		<>
 			<h1>Exhibition Curator</h1>
 			
-			<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={test}/>
+			<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={sourceChanged}/>
 			<Link to="/Gallery">View Gallery</Link>
 
 			<Outlet />
