@@ -76,10 +76,10 @@ const Search = () => {
 					state.details.sr.length > 0 ? (
 					<div>
 						<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
-						<SearchResults works={state.details.sr} src={srcAPI} /> 
+						<SearchResults works={state.details.sr} src={state.details.api} /> 
 						<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
 					</div>) : (<div>Nothing Found</div>)
-					) : (  <p> </p>)
+					) : (  <p> Nothing found </p>)
 				}
 					
 		</div>

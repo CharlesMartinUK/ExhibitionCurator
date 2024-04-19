@@ -45,8 +45,9 @@ class Cleveland  {
 		
 		return {sr:r, numPages: np, 
 				pageSize: 10,
-				numRecords: r.length
+				numRecords: r.length,
 				//page:compPage
+				api:"cma"
 				}
 		 
 	}		

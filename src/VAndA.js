@@ -37,7 +37,9 @@ class VAndA {
 		return {sr:filt, numPages: result.info.pages, 
 				pageSize: result.info.page_size,
 				numRecords:result.info.record_count,
-				page:result.info.page
+				page:result.info.page,
+				api:"va"
+				
 				}
 	}
 	
