@@ -48,7 +48,7 @@ const Search = () => {
 		// quatation marks needed otherwise tv does not work, multilbke words not a problem
 		//console.log("searching for ",searchText)
 		
-		if(searchText.length > 0) //only search if something to search for
+		//if(searchText.length > 0) //only search if something to search for
 			loadData(v.getURL(pageNumber) + searchText , v.process, dispatch )   
 		
 		// needed to reload page when param changes DOES NOT WORK SOMETIMES after page reload

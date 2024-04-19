@@ -48,10 +48,11 @@ const Layout = () => {
  
 		
 	function sourceChanged(src){
-		//console.log("layout src changed: "+num)
+		console.log("layout src changed: "+src)
 		//setSearchAPI(num)
 		//if(searchText.length <= 0) return
-
+		//setSearchParams({"src":src}, false)
+		
 		navigate('/search?q='+searchText+'&src='+src)
 	}
 
