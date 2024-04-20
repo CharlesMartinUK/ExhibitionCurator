@@ -2,8 +2,10 @@ import parse from 'html-react-parser';
 
 const Work=({title,description,origin,creationDate,location,image})=> {
 	//console.log(title," D:",description," O:",origin)
-	let safeD = (description === undefined ?  "" : description) // not sure why this is needed, sometimes get passed undefined
+	// not sure why this this happens but sometimes lods of undefined get passed in
+	// which causes parse to choke so guard that
 	
+	let safeD = (description === undefined ?  "" : description) 
 	return (
 		<div>
 			<p>Title: {title}</p>

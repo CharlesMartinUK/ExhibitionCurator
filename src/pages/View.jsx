@@ -18,7 +18,7 @@ const View = () => {
 	
 	useEffect(() => {
 		
-		console.log("view src is ",  searchParams.get("vsrc")  )
+		//console.log("view src is ",  searchParams.get("vsrc")  )
 		
 		var v = getSrcFromName( searchParams.get("vsrc")  )
 			

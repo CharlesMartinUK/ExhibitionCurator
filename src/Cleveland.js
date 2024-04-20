@@ -29,6 +29,7 @@ class Cleveland  {
 			//if (t.images.web.url != undefined) 
 			//img = t.images.web.url 
 			// cleveland does not appear to be any any low res images, site just scales bigger image down (I think)
+			//console.log("text is ",t.tombstone)
 			r.push( {title:t.title, imageData: t.images.web.url  , text:t.tombstone, musId:t.id, id:counter++ }  )
 			//console.log(t.images.web.url)
 			//title:t.title, text:t.tombstone, , musId:t.id, id:0
@@ -56,7 +57,9 @@ class Cleveland  {
 		
 		let t= data.data
 		
-		return {title: t.title,   description: t.description, 
+		console.log("description is ",t.description)
+		
+		return {title: t.title,   description: t.description == null ? "" : t.description , 
 			imageURL: t.images.web.url,
 			creationDate: t.creation_date,
 			origin: t.culture[0],

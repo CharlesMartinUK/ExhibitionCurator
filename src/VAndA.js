@@ -61,8 +61,8 @@ class VAndA {
 		
 		//console.log(  t.galleryLocations[0].current.text )
 		
-		console.log("description: ",t.summaryDescription)
-		let des = ""//t.summaryDescription != undefined ? t.summaryDescription : ""
+		//console.log("description: ",t.summaryDescription)
+		//let des = ""//t.summaryDescription != undefined ? t.summaryDescription : ""
 		return {title: t.titles[0].title,   description:  t.summaryDescription ,  
 			imageURL: imgURL,
 			creationDate: t.productionDates[0].date.text,
