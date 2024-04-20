@@ -57,7 +57,7 @@ class Cleveland  {
 		
 		let t= data.data
 		
-		console.log("description is ",t.description)
+		//console.log("description is ",t.description)
 		
 		return {title: t.title,   description: t.description == null ? "" : t.description , 
 			imageURL: t.images.web.url,
