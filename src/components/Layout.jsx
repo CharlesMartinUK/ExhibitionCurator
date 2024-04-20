@@ -1,6 +1,6 @@
-import React from 'react';
 
 
+	import React, { useEffect } from 'react';
 
 import { Outlet, Link } from "react-router-dom";
 import SearchControls from './SearchControls.jsx'
@@ -65,10 +65,11 @@ const Layout = () => {
 		navigate('/search?q='+searchText+'&src='+src)
 	}
 
-	
 	return (
 		<div >
+					
 			<Navbar id="main">
+				
 				<img src={logo} />
 			
 				<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={sourceChanged}/>

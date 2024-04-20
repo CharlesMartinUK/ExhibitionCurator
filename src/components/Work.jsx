@@ -10,7 +10,7 @@ const Work=({title,description,origin,creationDate,location,image})=> {
 	
 	return (
 		<div>
-			<p>Title: {title}</p>
+			<h2>Title: {title}</h2>
 			
 			<p>Description: {parse(safeD)}</p>						            
 			<p>Origin: {origin}         

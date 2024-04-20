@@ -19,7 +19,7 @@ describe("Cleveland test",() => {
 		
 		let r = t.process(data)
 		
-		console.log(r)
+		//console.log(r)
 		
 		expect(r.numPages).toBe(1)
 		expect(r.numRecords).toBe(1)
