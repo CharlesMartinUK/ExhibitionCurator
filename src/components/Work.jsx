@@ -1,11 +1,11 @@
-
+import parse from 'html-react-parser';
 
 const Work=({title,description,origin,creationDate,location,image})=> {
 	//console.log(description)
 	return (
 		<div>
 			<p>Title: {title}</p>
-			<p>Description: {description}</p>
+			<p>Description: {parse(description)}</p>
 									            
 			<p>Origin: {origin}         
 			Creation Date:{creationDate} Location:{location}

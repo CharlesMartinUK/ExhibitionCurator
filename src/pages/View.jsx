@@ -57,7 +57,7 @@ const View = () => {
 	
   return ( 
 	<div>
-		<h1>View</h1>
+		
 		{ state.loading ? ( <div>Loading..</div> ): ( <div>
 				  
 		  <Work 

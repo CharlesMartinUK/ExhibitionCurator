@@ -76,7 +76,7 @@ const Layout = () => {
 			</Navbar>
 
 			<Outlet />
-			bottom of page
+			
 		</div>
 	)
 };
