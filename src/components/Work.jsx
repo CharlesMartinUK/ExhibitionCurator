@@ -1,5 +1,7 @@
+
+
 const Work=({title,description,origin,creationDate,location,image})=> {
-	
+	//console.log(description)
 	return (
 		<div>
 			<p>Title: {title}</p>

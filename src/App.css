@@ -32,7 +32,7 @@ body {
 }
 
 .searchTextbox {
-	width:250px;
+	width:22ch;
 	display:inline;
 	
 }
