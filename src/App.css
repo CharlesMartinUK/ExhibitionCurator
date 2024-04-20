@@ -14,7 +14,7 @@
 }
 
 .thumbnailImage {
-	max-width:200px;
+	max-width:300px;
 }
 
 body {
@@ -34,5 +34,21 @@ body {
 .searchTextbox {
 	width:300px;
 	display:inline;
+	
+}
+
+.artCard {
+	border:1px solid white;
+	 width:500px;
+	
+	
+}
+
+
+#main {
+	position: sticky;
+	background-color:black;
+	top:0px; 
+	width:100%;
 	
 }

@@ -7,7 +7,7 @@ import { useSearchParams } from "react-router-dom";
 
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-
+import Card from 'react-bootstrap/Card';
 
 function SearchControls({search,searchChanged,searchText,srcChanged}) {
 

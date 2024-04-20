@@ -8,6 +8,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { useSearchParams } from "react-router-dom";
 
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 const Layout = () => {
 	
 	const navigate = useNavigate();
@@ -61,12 +64,12 @@ const Layout = () => {
 	
 	return (
 		<div >
-			<div id="main">
-<h1 style={{display:"inline"}}>Exhibition Curator</h1>
+			<Navbar id="main">
+<h1 style={{display:"inline"}}>Art Search</h1>
 			
 				<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={sourceChanged}/>
 				
-			</div>
+			</Navbar>
 
 			<Outlet />
 			bottom of page

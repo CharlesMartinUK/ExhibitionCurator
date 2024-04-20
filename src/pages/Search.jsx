@@ -10,6 +10,10 @@ import Pagination from '../components/Pagination.jsx'
 
 //import MetMus from '../MetMus.js'
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import {getSrcFromName} from '../sourceLocate.js'
 
 
@@ -75,8 +79,13 @@ const Search = () => {
 					state.details.sr ? (
 					state.details.sr.length > 0 ? (
 					<div>
-						<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
-						<SearchResults works={state.details.sr} src={state.details.api} /> 
+					<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
+						<Container>
+							<Row>
+							<SearchResults works={state.details.sr} src={state.details.api} /> 
+							</Row>
+						</Container>
+								
 						<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
 					</div>) : (<div>Nothing Found</div>)
 					) : (  <p> Nothing found </p>)

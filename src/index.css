@@ -65,11 +65,3 @@ button:focus-visible {
   }
 }
 
-
-#main {
-	position: sticky;
-	background-color:black;
-	top:0px; 
-	width:100%;
-	
-}
