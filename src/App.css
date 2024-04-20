@@ -38,8 +38,9 @@ body {
 }
 
 .artCard {
-	border:1px solid white;
+	border:2px outset  white;
 	 width:500px;
+	 margin:3px;
 	
 	
 }
