@@ -9,6 +9,8 @@ import Search from "./pages/Search.jsx";
 import Gallery from "./pages/Gallery.jsx";
 
 
+
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
 

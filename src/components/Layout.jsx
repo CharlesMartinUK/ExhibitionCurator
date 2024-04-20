@@ -11,6 +11,10 @@ import { useSearchParams } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+
+import logo from '../assets/slogo.png'
+
+
 const Layout = () => {
 	
 	const navigate = useNavigate();
@@ -65,7 +69,7 @@ const Layout = () => {
 	return (
 		<div >
 			<Navbar id="main">
-				<h1 >Art Search</h1> 
+				<img src={logo} />
 			
 				<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={sourceChanged}/>
 				
