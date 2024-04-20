@@ -8,6 +8,8 @@ import NoPage from "./pages/NoPage.jsx";
 import Search from "./pages/Search.jsx";
 import Gallery from "./pages/Gallery.jsx";
 
+
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
 
 function App() {

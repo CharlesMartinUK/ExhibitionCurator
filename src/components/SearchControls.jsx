@@ -1,6 +1,13 @@
 import React from 'react';
 
+import { Outlet, Link } from "react-router-dom";
+
 import { useSearchParams } from "react-router-dom";
+
+
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
 
 function SearchControls({search,searchChanged,searchText,srcChanged}) {
 
@@ -39,19 +46,23 @@ function SearchControls({search,searchChanged,searchText,srcChanged}) {
 	
 
 	return (
-		<div>
-		<form onSubmit={mySearch}>
-			<input type="text" onChange={searchEdit} value={searchText} maxLength={20}/> 
-			<label>
-			Collection: 
-			<select onChange={selected} value={srcAPI}>
+		<>
+		<form onSubmit={mySearch} >
+			
+			<Form.Control type="text" onChange={searchEdit} value={searchText} maxLength={20} placeholder="Search"  className="searchTextbox" data-bs-theme="dark"/> 
+			
+			
+			<Form.Select className="apiSelect" onChange={selected} value={srcAPI} aria-label="Default select example" data-bs-theme="dark">
 				<option value="va">Victoria and Albert</option>
 				<option value="cma">Cleveland Museum of Art</option>
-			</select>
-			</label>
-			<button type="button" onClick={mySearch} disabled={searchText.length <= 0}>Search</button>
+			</Form.Select>
+			
+			<Button type="button" onClick={mySearch} disabled={searchText.length <= 0}  variant="dark">Search</Button>
+			<Link to="/Gallery">View Gallery</Link>
 		</form>
-		</div>
+		
+		<hr />
+		</>
 	)
 
 }

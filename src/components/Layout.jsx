@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 import { Outlet, Link } from "react-router-dom";
 import SearchControls from './SearchControls.jsx'
 import { useNavigate } from 'react-router-dom';
@@ -52,21 +54,23 @@ const Layout = () => {
 		//setSearchAPI(num)
 		//if(searchText.length <= 0) return
 		//setSearchParams({"src":src}, false)
-		
+		// bug with empty search string
 		navigate('/search?q='+searchText+'&src='+src)
 	}
 
 	
 	return (
-		<>
-			<h1>Exhibition Curator</h1>
+		<div >
+			<div id="main">
+<h1 style={{display:"inline"}}>Exhibition Curator</h1>
 			
-			<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={sourceChanged}/>
-			<Link to="/Gallery">View Gallery</Link>
+				<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={sourceChanged}/>
+				
+			</div>
 
 			<Outlet />
 			bottom of page
-		</>
+		</div>
 	)
 };
 
