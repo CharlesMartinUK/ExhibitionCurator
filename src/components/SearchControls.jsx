@@ -58,7 +58,9 @@ function SearchControls({search,searchChanged,searchText,srcChanged}) {
 			</Form.Select>
 			
 			<Button type="button" onClick={mySearch} disabled={searchText.length <= 0}  variant="dark">Search</Button>
-			<Link to="/Gallery">View Gallery</Link>
+			<div style={{display:"inline",textAlign:"right",width:"300px", border:"1px solid red"}}>
+			<Link to="/Gallery" >View Gallery</Link>
+			</div>
 		</form>
 		
 		<hr />

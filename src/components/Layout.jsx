@@ -65,7 +65,7 @@ const Layout = () => {
 	return (
 		<div >
 			<Navbar id="main">
-<h1 style={{display:"inline"}}>Art Search</h1>
+				<h1 >Art Search</h1> 
 			
 				<SearchControls search={search} searchChanged={searchChanged}  searchText={searchText} srcChanged={sourceChanged}/>
 				

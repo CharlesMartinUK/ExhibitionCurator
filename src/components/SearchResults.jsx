@@ -6,7 +6,7 @@ function SearchResults({works,src}) {
 		//console.log(works)
 		//tryed to use react cards here but scrolled over top of stick / navbar for soem reason
 	return (
-		< >
+		<>
 			{
 				works.map( (item) => {
 					let ts = "view?id="+ item.musId  +'&vsrc=' + src 

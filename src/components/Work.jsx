@@ -9,7 +9,7 @@ const Work=({title,description,origin,creationDate,location,image})=> {
 			Creation Date:{creationDate} Location:{location}
 			</p>
 			
-			<img src={image} alt="More Detailed display of work"/>
+			<img src={image} alt="More Detailed display of work" className="responsiveImage"/>
 		
 		</div>
 	)
