@@ -1,11 +1,13 @@
 
 # Website to view artworks using Web API
 
-User can search online art gallery API and results are displayed in progressive layout
+User can search online art gallery API and results are displayed in progressive layout.
+Works can be added to session based gallery and viewed on gallery page.
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-and uses React Bootstrap
+and uses React Bootstrap.
 
 ## Available Scripts
 
