@@ -46,8 +46,9 @@ class VAndA {
 	
 	// use system number
 	// to get json with info 
+	// 'https://api.vam.ac.uk/v2/object/{systemNumber}'
 	//https://iiif.vam.ac.uk/collections/{systemNumber}/manifest.json NOPE NOT THIS
-	//https://api.vam.ac.uk/docs#/SystemNumber/collection_object_v2_object_O_object_num__get
+
 	
 	itemProcess(data) {
 		
@@ -69,7 +70,7 @@ class VAndA {
 		}
 		
 		//console.log(  t.galleryLocations[0].current.text )
-		/*
+		/* 
 		console.log("description: ",t.summaryDescription)
 		console.log("image :",imgURL)
 		console.log("creation date :",t.productionDates[0].date.text)
