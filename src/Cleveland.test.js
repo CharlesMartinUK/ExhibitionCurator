@@ -25,10 +25,8 @@ describe("Cleveland test",() => {
 		expect(r.numRecords).toBe(1)
 		
 		expect(r.sr[0].title).toBe('Inro (Case) with Mice and Beans')
-		expect(r.sr[0].imageData).toBe('https://openaccess-cdn.clevelandart.org/1916.885/1916.885_web.jpg')
-		
+		expect(r.sr[0].imageData).toBe('https://openaccess-cdn.clevelandart.org/1916.885/1916.885_web.jpg')		
 		expect(r.sr[0].text).toBe('Inro (Case) with Mice and Beans, late 1800s. Japan, Meiji period (1868–1912). Lacquer on wood with color and sprinkled gold powder design (maki-e); diameter: 8.4 cm (3 5/16 in.). The Cleveland Museum of Art, Gift of D. Z. Norton 1916.885')
-		
 		expect(r.sr[0].musId).toBe(97254)
 		
 	})
@@ -48,6 +46,26 @@ describe("Cleveland test",() => {
 		
 		expect(r.sr.length).toBe(4)
 		expect(r.numPages).toBe(7)
+		
+	})
+
+
+	test("test getting details of work",() => {
+		let t = new Cleveland ()
+		
+		let data = {"data": {"id": 97254, "accession_number": "1916.885", "share_license_status": "CC0", "tombstone": "Inro (Case) with Mice and Beans, late 1800s. Japan, Meiji period (1868\u20131912). Lacquer on wood with color and sprinkled gold powder design (maki-e); diameter: 8.4 cm (3 5/16 in.). The Cleveland Museum of Art, Gift of D. Z. Norton 1916.885", "current_location": null, "title": "Inro (Case) with Mice and Beans", "title_in_original_language": "\u9f20\u306b\u8c46\u8494\u7d75\u5370\u7c60)", "creation_date": "late 1800s", "creation_date_earliest": 1870, "creation_date_latest": 1899, "artists_tags": [], "culture": ["Japan, Meiji period (1868\u20131912)"], "technique": "Lacquer on wood with color and sprinkled gold powder design (maki-e)", "support_materials": [], "department": "Japanese Art", "collection": "Japanese Art", "type": "Lacquer", "measurements": "Diameter: 8.4 cm (3 5/16 in.)", "dimensions": {"diameter": {"height": 0.084}}, "state_of_the_work": null, "edition_of_the_work": null, "copyright": null, "inscriptions": [], "exhibitions": {"current": [{"id": 455863, "title": "Animals in Japanese Art (Japanese art rotation)", "description": "<i>Animals in Japanese Art (Japanese art rotation)</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (June 24-December 10, 2023).", "opening_date": "2023-06-24T04:00:00"}], "legacy": []}, "provenance": [{"description": "D. Z. Norton [1851\u20131928], Cleveland, OH, given to the Cleveland Museum of Art", "citations": [], "footnotes": null, "date": "?\u20131916"}, {"description": "The Cleveland Museum of Art, Cleveland, OH", "citations": [], "footnotes": null, "date": "1916\u2013"}], "find_spot": null, "related_works": [], "former_accession_numbers": [], "did_you_know": null, "description": "This round inro is decorated with an image of a single mouse feasting on beans. The theme is elaborated with a metal <em>ojime</em> (cinch) in the form of a cloth bag tied with rope\u2014suggesting the food stores the mouse is raiding. The carved wood netsuke, or toggle, is in the shape of a mouse clutching a nut.", "external_resources": {"wikidata": ["https://www.wikidata.org/wiki/Q79481403"], "internet_archive": ["https://archive.org/details/clevelandart-1916.885-inro", "https://archive.org/details/clevelandart-1916.885-inro-case-with-mice"]}, "citations": [], "url": "https://clevelandart.org/art/1916.885", "images": {"annotation": null, "web": {"url": "https://openaccess-cdn.clevelandart.org/1916.885/1916.885_web.jpg", "width": "690", "height": "900", "filesize": "76798", "filename": "1916.885_web.jpg"}, "print": {"url": "https://openaccess-cdn.clevelandart.org/1916.885/1916.885_print.jpg", "width": "2606", "height": "3400", "filesize": "972457", "filename": "1916.885_print.jpg"}, "full": {"url": "https://openaccess-cdn.clevelandart.org/1916.885/1916.885_full.tif", "width": "6000", "height": "7828", "filesize": "140931408", "filename": "1916.885_full.tif"}}, "alternate_images": [{"date_created": "2018-08-28T09:47:29", "annotation": "", "web": {"url": "https://openaccess-cdn.clevelandart.org/alternate/1916.885/1916.885_alt0_web.jpg", "width": "696", "height": "900", "filesize": "77705"}, "print": {"url": "https://openaccess-cdn.clevelandart.org/alternate/1916.885/1916.885_alt0_print.jpg", "width": "2628", "height": "3400", "filesize": "988020"}, "full": {"url": "https://openaccess-cdn.clevelandart.org/alternate/1916.885/1916.885_alt0_full.tif", "width": "6000", "height": "7763", "filesize": "139761360"}}], "creditline": "Gift of D. Z. Norton", "sketchfab_id": null, "sketchfab_url": null, "gallery_donor_text": null, "athena_id": 97254, "creators": [], "legal_status": "accessioned", "accession_date": "1916-05-26T00:00:00", "sortable_date": 1870, "date_text": "late 1800s", "collapse_artists": false, "on_loan": false, "recently_acquired": false, "record_type": "object", "conservation_statement": null, "is_nazi_era_provenance": false, "impression": null, "alternate_titles": ["Inro"], "is_highlight": false, "updated_at": "2024-03-26 01:56:20.265000"}}
+		
+		let r = t.itemProcess(data)
+		
+		//console.log(t)
+		
+		expect(r.title).toBe("Inro (Case) with Mice and Beans")
+		expect(r.description).toBe("This round inro is decorated with an image of a single mouse feasting on beans. The theme is elaborated with a metal <em>ojime</em> (cinch) in the form of a cloth bag tied with rope\u2014suggesting the food stores the mouse is raiding. The carved wood netsuke, or toggle, is in the shape of a mouse clutching a nut.")
+		expect(r.creationDate).toBe("late 1800s")
+		expect(r.origin).toBe("Japan, Meiji period (1868\u20131912)")
+		expect(r.systemNumber).toBe(97254)
+		
+		
 		
 	})
 
