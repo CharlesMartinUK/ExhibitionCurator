@@ -1,5 +1,6 @@
 //https://www.leighhalliday.com/mock-fetch-jest
 
+// cannot get this state thing to work
 export class State {
 	
 	static LOADING = 1

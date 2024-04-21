@@ -67,21 +67,23 @@ const Search = () => {
 	if(state.loading == true) 
 		return <p>Loading..</p>
 	
-	if(state.details.sr.length == 0) 
-		return  <p> Nothing found </p>
-	
-	else {
-		return <div>
-					<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
-					<Container>
-						<Row>
-							<SearchResults works={state.details.sr} src={state.details.api} /> 
-						</Row>
-					</Container>
-								
-					<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
-				</div>
-	}
+	if("sr"  in state.details) { // something back
+		if(state.details.sr.length == 0) 
+			return  <p> Nothing found </p>
+		
+		else {
+			return <div>
+						<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
+						<Container>
+							<Row>
+								<SearchResults works={state.details.sr} src={state.details.api} /> 
+							</Row>
+						</Container>
+									
+						<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
+					</div>
+		}}
+	else return <p> </p>
 	
 };
 
