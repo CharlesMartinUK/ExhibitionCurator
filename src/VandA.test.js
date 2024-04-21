@@ -80,5 +80,27 @@ describe("Test V and A data processing",()=> {
 		//console.log(r)
 	
 	} )	
+	
+	test("get item missing title",() => {
+		let v = new VAndA()
+		let r = v.itemProcess({ "meta": {images:{ "_iiif_image":"IsTheImage" } },
+			
+			record: {
+				systemNumber:99999,
+				summaryDescription:"Big Picture",
+				titles:[ ],
+				productionDates:[  {date:{text:1999}}  ],
+				
+				placesOfOrigin:[ {place:{text:"London"} } ],
+				galleryLocations:[ {current: {text:"MyHouse"}} ],
+			}
+		
+		})
+	
+	expect(r.title).toBe("")
+	
+	})
+	
+	
 
 }) 
