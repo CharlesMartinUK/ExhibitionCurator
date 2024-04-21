@@ -80,10 +80,7 @@ class VAndA {
 		}
 		
 		
-		
-		
 		let placeOfOrigin = ""
-		
 		if("placesOfOrigin" in t) {
 			if(t.placesOfOrigin.length > 0) {
 				placeOfOrigin = t.placesOfOrigin[0].place.text
@@ -97,7 +94,6 @@ class VAndA {
 			}
 		}
 		
-		//console.log(  t.galleryLocations[0].current.text )
 		/*
 		console.log("description: ",t.summaryDescription)
 		console.log("image :",imgURL)
