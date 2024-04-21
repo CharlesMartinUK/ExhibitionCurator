@@ -88,7 +88,7 @@ describe("Test V and A data processing",()=> {
 			record: {
 				systemNumber:99999,
 				summaryDescription:"Big Picture",
-				titles:[ ],
+				titles:[ ], // missing titles
 				productionDates:[  {date:{text:1999}}  ],
 				
 				placesOfOrigin:[ {place:{text:"London"} } ],
@@ -97,7 +97,7 @@ describe("Test V and A data processing",()=> {
 		
 		})
 	
-	expect(r.title).toBe("")
+		expect(r.title).toBe("")
 	
 	})
 	
