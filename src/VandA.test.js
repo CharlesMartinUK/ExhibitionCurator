@@ -80,8 +80,8 @@ describe("Test V and A data processing",()=> {
 		//console.log(r)
 	
 	} )	
-	
-	test("get item missing title",() => {
+	// some v and a records missing elements in  arrays (array is empty) so check this is handled correctly
+	test("check missing elements in array checked correclty",() => {
 		let v = new VAndA()
 		let r = v.itemProcess({ "meta": {images:{ "_iiif_image":"IsTheImage" } },
 			
@@ -89,15 +89,18 @@ describe("Test V and A data processing",()=> {
 				systemNumber:99999,
 				summaryDescription:"Big Picture",
 				titles:[ ], // missing titles
-				productionDates:[  {date:{text:1999}}  ],
+				productionDates:[     ],
 				
-				placesOfOrigin:[ {place:{text:"London"} } ],
-				galleryLocations:[ {current: {text:"MyHouse"}} ],
+				placesOfOrigin:[  ],
+				galleryLocations:[  ],
 			}
 		
 		})
 	
 		expect(r.title).toBe("")
+		expect(r.origin).toBe("")
+		expect(r.location).toBe("")
+		expect(r.creationDate).toBe("")
 	
 	})
 	

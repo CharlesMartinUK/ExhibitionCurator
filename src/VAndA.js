@@ -95,7 +95,7 @@ class VAndA {
 		}
 		
 		//console.log(  t.galleryLocations[0].current.text )
-		
+		/*
 		console.log("description: ",t.summaryDescription)
 		console.log("image :",imgURL)
 		console.log("creation date :",productionDate)
@@ -103,11 +103,11 @@ class VAndA {
 		console.log("gallery location ",galleryLocation )
 		console.log("system number",t.systemNumber)
 		console.log("title ",title )
-		
+		*/
 		//let des = ""//t.summaryDescription != undefined ? t.summaryDescription : ""
 		return {title: title ,   description:  t.summaryDescription ,  
 			imageURL: imgURL,
-			creationDate: t.productionDates[0].date.text,
+			creationDate: productionDate,
 			origin: placeOfOrigin,
 			location: galleryLocation,
 			systemNumber:t.systemNumber
