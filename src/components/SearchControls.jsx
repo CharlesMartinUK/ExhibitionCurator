@@ -50,8 +50,7 @@ function SearchControls({search,searchChanged,searchText,srcChanged}) {
 		<form onSubmit={mySearch} >
 			
 			<Form.Control autoFocus default type="text" onChange={searchEdit} value={searchText} maxLength={20} placeholder="Search"  className="searchTextbox" data-bs-theme="dark"/> 
-			
-			
+						
 			<Form.Select className="apiSelect" onChange={selected} value={srcAPI} aria-label="Default select example" data-bs-theme="dark">
 				<option value="va">Victoria and Albert</option>
 				<option value="cma">Cleveland Museum of Art</option>
