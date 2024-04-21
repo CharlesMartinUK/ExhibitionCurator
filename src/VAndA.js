@@ -1,6 +1,8 @@
 
 //https://developers.vam.ac.uk/guide/v2/welcome.html
 
+//search with 2letters or less causes error for some reason
+
 class VAndA {
 
 	constructor() {
