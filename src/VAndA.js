@@ -69,22 +69,47 @@ class VAndA {
 			}
 		}
 		
+		let productionDate = ""
+		if("productionDates" in t) {
+			if(t.productionDates.length > 0) {
+				productionDate = t.productionDates[0].date.text
+			}
+		}
+		
+		
+		
+		
+		let placeOfOrigin = ""
+		
+		if("placesOfOrigin" in t) {
+			if(t.placesOfOrigin.length > 0) {
+				placeOfOrigin = t.placesOfOrigin[0].place.text
+			}
+		}
+		
+		let galleryLocation = ""
+		if("galleryLocations" in t) {
+			if(t.galleryLocations.length > 0) {
+				galleryLocation = t.galleryLocations[0].current.text
+			}
+		}
+		
 		//console.log(  t.galleryLocations[0].current.text )
-		/* 
+		
 		console.log("description: ",t.summaryDescription)
 		console.log("image :",imgURL)
-		console.log("creation date :",t.productionDates[0].date.text)
-		console.log("origin ",t.placesOfOrigin[0].place.text)
-		console.log("gallery location ",t.galleryLocations[0].current.text )
+		console.log("creation date :",productionDate)
+		console.log("origin ",placeOfOrigin)
+		console.log("gallery location ",galleryLocation )
 		console.log("system number",t.systemNumber)
 		console.log("title ",title )
-		*/
+		
 		//let des = ""//t.summaryDescription != undefined ? t.summaryDescription : ""
 		return {title: title ,   description:  t.summaryDescription ,  
 			imageURL: imgURL,
 			creationDate: t.productionDates[0].date.text,
-			origin: t.placesOfOrigin[0].place.text,
-			location: t.galleryLocations[0].current.text,
+			origin: placeOfOrigin,
+			location: galleryLocation,
 			systemNumber:t.systemNumber
 			//src:"va"
 			}
