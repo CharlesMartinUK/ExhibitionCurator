@@ -53,47 +53,36 @@ const Search = () => {
 		//console.log("searching for ",searchText)
 		
 		//if(searchText.length > 0) //only search if something to search for
-			loadData(v.getURL(pageNumber) + searchText , v.process, dispatch )   
+		loadData(v.getURL(pageNumber) + searchText , v.process, dispatch )   
 		
 		// needed to reload page when param changes DOES NOT WORK SOMETIMES after page reload
 		// caused by browser caching?, only problem if code has been changed ???
 	},[ location ]); 
 
-	//console.log(state.details)
+	//console.log(state)
 	
-	switch (state) {
-		
-		case State.Error : 
-			return  (<p>Error Loading Data</p> ) 
-		case State.Loading :
-			return <p>Loading..</p>
-		//why state.loaded not working ???
-	}
-
-
-	return (  
-		<div>
-			<h1>Search Results</h1>
-			
-				{
-					state.details.sr ? (
-					state.details.sr.length > 0 ? (
-					<div>
+	if(state.error == true)
+		return  (<p>Error Loading Data</p> ) 
+	
+	if(state.loading == true) 
+		return <p>Loading..</p>
+	
+	if(state.details.sr.length == 0) 
+		return  <p> Nothing found </p>
+	
+	else {
+		return <div>
 					<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
-						<Container>
-							<Row>
+					<Container>
+						<Row>
 							<SearchResults works={state.details.sr} src={state.details.api} /> 
-							</Row>
-						</Container>
+						</Row>
+					</Container>
 								
-						<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
-					</div>) : (<div>Nothing Found</div>)
-					) : (  <p> Nothing found </p>)
-				}
-					
-		</div>
-		
-	)
+					<Pagination page={pageNumber} numPages={state.details.numPages} backClick={() => changePage(pageNumber-1)} forwardClick={() => changePage(pageNumber+1)}/>
+				</div>
+	}
+	
 };
 
 export default Search;
