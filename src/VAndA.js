@@ -62,7 +62,7 @@ class VAndA {
 		
 		let title = ""
 		
-		if ("titles" in t) { // some works have no title
+		if ("titles" in t) { // some works have no title (well nothing in title but guard against errors here)
 			if(t.titles.length > 0) {
 				title = t.titles[0].title
 			}
