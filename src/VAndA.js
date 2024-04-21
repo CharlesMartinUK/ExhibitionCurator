@@ -8,12 +8,13 @@ class VAndA {
 	}
 
 	getURL(page) {
-		
-		return 'https://api.vam.ac.uk/v2/objects/search?images_exist=1&page='+ page  +'&q_object_title='
+		//i only want paintings
+		//&q_object_type=painting increase matchs for cat,  search mode narrow does not seem to work?
+		return 'https://api.vam.ac.uk/v2/objects/search?images_exist=1&page='+ page  +'&images_exist=1&data_restrict=descriptive_only&q_object_name='
 	}
 
 
-	process(result)  { 
+	process(result)  {    
 		
 		let info = result.records
 					
@@ -40,8 +41,8 @@ class VAndA {
 				page:result.info.page,
 				api:"va"
 				
-				}
-	}
+				} 
+	}    
 	
 	// use system number
 	// to get json with info 
@@ -59,11 +60,26 @@ class VAndA {
 			imgURL = data.meta.images._iiif_image + '/full/full/0/default.jpg'
 		}
 		
-		//console.log(  t.galleryLocations[0].current.text )
+		let title = ""
 		
-		//console.log("description: ",t.summaryDescription)
+		if ("titles" in t) {
+			if(t.titles.length > 0) {
+				title = t.titles[0].title
+			}
+		}
+		
+		//console.log(  t.galleryLocations[0].current.text )
+		/*
+		console.log("description: ",t.summaryDescription)
+		console.log("image :",imgURL)
+		console.log("creation date :",t.productionDates[0].date.text)
+		console.log("origin ",t.placesOfOrigin[0].place.text)
+		console.log("gallery location ",t.galleryLocations[0].current.text )
+		console.log("system number",t.systemNumber)
+		console.log("title ",title )
+		*/
 		//let des = ""//t.summaryDescription != undefined ? t.summaryDescription : ""
-		return {title: t.titles[0].title,   description:  t.summaryDescription ,  
+		return {title: title ,   description:  t.summaryDescription ,  
 			imageURL: imgURL,
 			creationDate: t.productionDates[0].date.text,
 			origin: t.placesOfOrigin[0].place.text,
