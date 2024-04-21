@@ -61,8 +61,9 @@ class VAndA {
 			imgURL = data.meta.images._iiif_image + '/full/full/0/default.jpg'
 		}
 		
-		let title = ""
 		
+		//some data in arrays that may be empty, so check first before using
+		let title = ""
 		if ("titles" in t) { // some works have no title (well nothing in title but guard against errors here)
 			if(t.titles.length > 0) {
 				title = t.titles[0].title
