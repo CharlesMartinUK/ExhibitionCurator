@@ -7,10 +7,12 @@ Works can be added to session based gallery and viewed on gallery page.
 
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 and uses React Bootstrap.
 
 ## RUNNING
+
+install Node.js
 
 In the project directory, you can run:
 
