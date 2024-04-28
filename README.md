@@ -14,6 +14,8 @@ and uses React Bootstrap.
 
 install Node.js
 
+Download this project.
+
 In the project directory, you can run:
 
 ### `npm start`
